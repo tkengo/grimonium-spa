@@ -1,28 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>URL</th>
+            <th>Crawler</th>
+            <th>Scraper</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Process</th>
+          </tr>
+        </thead>
+      </table>
     );
   }
 }
 
 export default App;
+// table.table
+//   thead
+//     tr
+//       th URL
+//       th クローラ
+//       th スクレイパ
+//       th 優先度
+//       th ステータス
+//       th 処理
+//   tbody
+//     tr v-for="queue in queues"
+//       td = '{{ queue.url }}'
+//       td = '{{ queue.crawler }}'
+//       td = '{{ queue.scraper }}'
+//       td = '{{ queue.priority }}'
+//       td = '{{ queue.crawl_status }}'
+//       td
+//         button.btn.btn-primary @click="_queue(queue)" キューイング
+//         button.btn.btn-primary @click="crawl(queue)" クロール
